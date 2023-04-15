@@ -27,7 +27,7 @@ function register(event) {
                 // localStorage.setItem(key,value)    to save into ls
                 // localStorage.getItem(key)       to get data from ls
                 // localStorage.removeItem(key)    to remove data from storage
-                console.log(userdata);
+                // console.log(userdata);
             } else {
                 console.log("password not match");
             }
