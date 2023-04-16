@@ -43,13 +43,13 @@ function register(event) {
 
 }
 
-function getdata(){
-   //    var txt = localStorage.getItem(Users)
-    console.log(window.localStorage.getItem("Users"));
-}
-
-// function getinfo(){
-//     var get_data=
-//     JSON.parse(localStorage.getItem("Users"));
-//     console.log(get_data);
+// function getdata(){
+//    //    var txt = localStorage.getItem(Users)
+//     console.log(window.localStorage.getItem("Users"));
 // }
+
+function getinfo(){
+    var get_data=
+    JSON.parse(localStorage.getItem("Users"));
+    console.log(get_data);
+}
