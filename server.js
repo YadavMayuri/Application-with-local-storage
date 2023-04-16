@@ -73,9 +73,7 @@ function register(event) {
                 // JSON.stringify;           //  convert object into string
                 // JSON.parse();            // convert json into object
                 // localStorage.setItem(key,value)    // to save into ls
-                // localStorage.getItem(key)       // to get data from ls
-                // localStorage.removeItem(key)    // to remove data from storage
-
+                // localStorage.getItem(key)       // to get data from lsm,x
                 // console.log(userdata);
 
                     // var userdata = {
