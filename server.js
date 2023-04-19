@@ -54,49 +54,108 @@ function register(event) {
 
 }
 
-//     function getdata(){
-//        //    var txt = localStorage.getItem(Users)
-//         console.log(window.localStorage.getItem("Users"));
-//     }
+// function getdata() {
+//     //    var txt = localStorage.getItem(Users)
+//     console.log(window.localStorage.getItem("Users"));
+// }
 
-//     function getinfo(){
-//         var get_data=
-//         JSON.parse(localStorage.getItem("Users"));
-//         console.log(get_data);
+function getinfo() {
+    var get_data =
+        JSON.parse(localStorage.getItem("Users"));
+    console.log(get_data);
+}
+
+
+
+
+// now store data in ls
+// localStorage.setItem("Users", JSON.stringify(userdata))
+// JSON.stringify;           //  convert object into string
+// JSON.parse();            // convert json into object
+// localStorage.setItem(key, value)    // to save into ls
+// localStorage.getItem(key)       // to get data from lsm,x
+// console.log(userdata);
+
+// var userdata = {
+//     userName: name,
+//     userEmail: email,
+//     userPassword: password,
+//     userConfirmPassword: confirmpassword
+// }
+
+// var Ls = JSON.parse(localStorage.getItem("Users")) || []
+// Ls.push(userdata);
+// console.log(Ls)
+// localStorage.setItem("Users", JSON.stringify(Ls))
+
+// var flag = false;
+// for (var i = 0; i < Ls.length; i++) {
+//     if (Ls[i].userEmail == email) {
+//         flag = true;
+//     }
+// }
+// if (!flag) {
+//     alert("good to go to register")
+// }
+// else {
+//     alert("email matched")
 // }
 
 
+// Step 1  : Get user typed data from html to JS = Completed
+// Step 2 : Get all users data into JS from LS = Completed
+// Step 3 : Iterate all users (LS) with user typed data 
+// Step 4 : If email & password both match at same time then
+//  show user suceess
 
 
-                //now store data in ls
-                // localStorage.setItem("Users", JSON.stringify(userdata))
-                // JSON.stringify;           //  convert object into string
-                // JSON.parse();            // convert json into object
-                // localStorage.setItem(key,value)    // to save into ls
-                // localStorage.getItem(key)       // to get data from lsm,x
-                // console.log(userdata);
+function login(event) {
+    event.preventDefault();
 
-                    // var userdata = {
-    //     userName: name,
-    //     userEmail: email,
-    //     userPassword: password,
-    //     userConfirmPassword: confirmpassword
-    // }
+    var userEmail = document.getElementById("useremail").value;
+    var userPassword = document.getElementById("userpassword").value;
 
-    // var Ls = JSON.parse(localStorage.getItem("Users")) || []
-    // Ls.push(userdata);
-    // console.log(Ls)
-    // localStorage.setItem("Users", JSON.stringify(Ls))
+    var Ls = JSON.parse(localStorage.getItem("Users"));
 
-    // var flag = false;
-    // for (var i = 0; i < Ls.length; i++) {
-    //     if (Ls[i].userEmail == email) {
-    //         flag = true;
-    //     }
-    // }
-    // if (!flag) {
-    //     alert("good to go to register")
-    // }
-    // else {
-    //     alert("email matched")
-    // }
+    var flag = false;
+    for (var i = 0; i < Ls.length; i++) {
+        if (Ls[i].userEmail == userEmail && Ls[i].userPassword == userPassword) {
+            flag = true;
+        }
+    }
+    if (flag == true) {
+        alert("login successfull")
+    }
+    else {
+        alert("feilds not matched")
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
