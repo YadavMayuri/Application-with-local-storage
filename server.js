@@ -11,7 +11,7 @@ function register(event) {
     // console.log(confirmpassword);
 
     if (name && email && password && confirmpassword) {
-        if (password.length >= 8 && confirmpassword >= 8) {
+        if (password.length >= 8 && confirmpassword.length >= 8) {
 
             if (password == confirmpassword) {
 
