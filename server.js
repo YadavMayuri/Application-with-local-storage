@@ -42,14 +42,14 @@ function register(event) {
                 }
             }
             else {
-                console.log("password not match");
+                alert("password not match");
             }
 
         } else {
-            console.log("password should  include 8 or more characters");
+            alert("password should  include 8 or more characters");
         }
     } else {
-        console.log("please fill all fields");
+        alert("please fill all fields");
     }
 
 }
