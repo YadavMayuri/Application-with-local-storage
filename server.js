@@ -127,7 +127,7 @@ function login(event) {
         alert("login successfull")
     }
     else {
-        alert("feilds not matched")
+        alert("Credintails not matched")
     }
 
 }
