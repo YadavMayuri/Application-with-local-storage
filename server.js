@@ -117,13 +117,17 @@ function login(event) {
 
     var Ls = JSON.parse(localStorage.getItem("Users"));
 
+    var currentUser;
     var flag = false;
     for (var i = 0; i < Ls.length; i++) {
         if (Ls[i].userEmail == userEmail && Ls[i].userPassword == userPassword) {
             flag = true;
+            currentUser=Ls[i];
         }
     }
     if (flag == true) {
+        localStorage.setItem("currentUser", JSON.stringify(currentUser))
+        window.location.href='./home.html';
         alert("login successfull")
     }
     else {
