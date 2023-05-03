@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple products</title>
+    <style>
+        #products {
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            justify-content: start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        #products>div {
+            width: 18%;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #products>div>img {
+            width: 100%;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>All Products</h1>
+    <div id="products"></div>
+    <script>
+        window.onload = function () {
+            // alert("CKJAN")
+
+            var divToShowProducts = document.getElementById("products");
+            var finalData = "";
+
+            var productsFromLS = JSON.parse(localStorage.getItem("Products"))
+            for (var i = 0; i < productsFromLS.length; i++) {
+                finalData += `<div id='singlePro'><img src=${productsFromLS[i].proImage} /><h3>${productsFromLS[i].proName}</h3><p> ${productsFromLS[i].proPrice}</p></div>`;
+            }
+
+            // console.log(finalData, "finalData here")
+
+            divToShowProducts.innerHTML = finalData;
+
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

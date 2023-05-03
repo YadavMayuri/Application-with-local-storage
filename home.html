@@ -13,6 +13,7 @@
         <button onclick="window.location.href=`./login.html`">login</button>
         <button onclick="window.location.href=`./register.html`">register</button>
     </div>
+    <div id="logout"></div>
 
     <script>
         window.onload = function () {
@@ -21,16 +22,26 @@
             // console.log(currentUser,"current user");
             if (!!currentUser) {
                 // alert(currenUser,"username")
+                var logoutDiv = document.getElementById("logout")
                 var divfromHtml = document.getElementById("switch");
                 // console.log(divfromHtml, "divfromhtml");
                 // var h1=document.createElement("h1");
                 // h1.innerText="Mayuri"
                 // divfromHtml.append(h1)
+                var button = '<button onclick="logout()">Logout</button>'
                 var name = `<h1>${currentUser.userName}</h1>`;
                 divfromHtml.innerHTML = name;
-            } else {
-                alert("current user absent")
+                logoutDiv.innerHTML = button;
             }
+            //  else {
+            //     alert("current user absent")
+            // }
+
+        }
+        function logout() {
+            alert("Logout successful.")
+            localStorage.removeItem("currentUser")
+            window.location.reload()
         }
     </script>
 </body>
